@@ -14,7 +14,7 @@ int check_cycle(listint_t *list)
 		return (0);
 	hare = list;
 	tortise = list;
-	while (hare)
+	while (hare != NULL && hare->next != NULL)
 	{
 		hare = (hare->next)->next;
 		tortise = tortise->next;
