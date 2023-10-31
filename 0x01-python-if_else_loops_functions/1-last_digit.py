@@ -2,7 +2,6 @@
 import random
 
 number = random.randint(-10000, 10000)
-number = 0
 if number < 0:
     remainder = (-1 * number) % 10
     remainder = remainder * -1
