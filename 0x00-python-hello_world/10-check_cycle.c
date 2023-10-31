@@ -1,9 +1,9 @@
-#include "list.h"
+#include "lists.h"
 
 
 int check_cycle(listint_t *list)
 {
-        listint_s *hare, *tortise;
+        listint_t *hare, *tortise;
 
         hare = list;
         tortise = list;
