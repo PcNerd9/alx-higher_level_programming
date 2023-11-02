@@ -17,6 +17,7 @@ if __name__ == "__main__":
     a = int(argv[1])
     b = int(argv[3])
 
+    result = 0
     match argv[2]:
         case '+':
             result = add(a, b)
@@ -26,5 +27,5 @@ if __name__ == "__main__":
             result = mul(a, b)
         case '/':
             result = div(a, b)
-    print("{} + {} = {}".format(a, b, result))
+    print("{} {} {} = {}".format(a ,argv[2], b, result))
     exit(0)
