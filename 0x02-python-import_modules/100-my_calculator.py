@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 
-from calculator_1 import *
+from calculator_1 import add, sub, mul, div
 from sys import argv, exit
 
 operator = ['+', '-', '*', '/']
 no_args = len(argv)
 if (no_args != 4):
-    print("Usage: {} <a> operator <b>".format(argv[0]))
+    print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     exit(1)
 elif (argv[2] not in operator):
     print(argv[2])
-    print("Unkown operator. Available operators: +, -, * and /")
+    print("Unknown operator. Available operators: +, -, * and /")
     exit(1)
 
 a = int(argv[1])
