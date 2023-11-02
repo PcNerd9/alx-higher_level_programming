@@ -27,5 +27,5 @@ if __name__ == "__main__":
             result = mul(a, b)
         case '/':
             result = div(a, b)
-    print("{} {} {} = {}".format(a ,argv[2], b, result))
+    print("{} {} {} = {}".format(a, argv[2], b, result))
     exit(0)
