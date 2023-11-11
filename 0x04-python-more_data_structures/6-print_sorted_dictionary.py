@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
 def print_sorted_dictionary(a_dictionary):
-    new_list = dict(sorted(a_dictionary.items()))
-    for key, value in a_dictionary.items():
-        print("{}: {}".format(key, value))
+    if (a_dictionary is None):
+        return
+    if (len(a_dictionary) == 0):
+        return
+    sort_dict = sorted(list(a_dictionary))
+    for key in sort_dict:
+        print("{}: {}".format(key, a_dictionary[key]))
