@@ -1,6 +1,15 @@
 #!/usr/bin/python3
 
+
+"""
+Defines a square with a private
+instance attribute
+"""
+
+
 class Square:
+    """defines a square with a size property
+    and compute the area of the square"""
     def __init__(self, size=0):
         self.__size = size
 
