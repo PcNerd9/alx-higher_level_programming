@@ -1,6 +1,17 @@
 #!/usr/bin/python3
 
+
+"""
+Defines a square with a private
+instance attribute
+"""
+
+
 class Square:
+    """ defines a square with a size property,
+    compute the current area of the square,
+    and print the square using # with it appropriate
+    co-ordinate"""
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
