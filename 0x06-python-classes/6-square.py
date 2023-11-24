@@ -4,6 +4,7 @@
 """
 Defines a square with a private
 instance attribute
+checks the validation of the position
 """
 
 
