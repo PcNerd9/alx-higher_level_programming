@@ -9,6 +9,9 @@ the area
 
 
 class Square:
+    """defines a square and compute
+    the current area of the square
+    """
     def __init__(self, size=0):
         if (type(size) != int):
             raise TypeError("size must be an integer")
