@@ -6,6 +6,7 @@ Defines a square with a private
 instance attribute
 """
 
+
 class Square:
     """define a square with only positive
     integers"""
