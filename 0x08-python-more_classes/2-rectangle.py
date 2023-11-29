@@ -39,7 +39,6 @@ class Rectangle:
     def height(self):
         return self.__height
 
-
     @width.setter
     def width(self, value):
         if (type(value) != int):
@@ -55,7 +54,7 @@ class Rectangle:
         elif (value < 0):
             raise ValueError("height must be >= 0")
         self.__height = value
-    
+
     def area(self):
         return (self.__width * self.__height)
 
