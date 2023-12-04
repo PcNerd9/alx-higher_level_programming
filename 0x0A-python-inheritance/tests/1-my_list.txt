@@ -1,0 +1,7 @@
+>>> import sys
+>>> sys.path.append("/home/pcnerd/All_My_Alx_projects/alx-higher_level_programming/0x0A-python-inheritance")
+>>> MyList = __import__("1-my_list").MyList
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(2)
+>>> my_list.append(6)
