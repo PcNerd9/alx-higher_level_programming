@@ -1,0 +1,12 @@
+>>> import sys
+>>> sys.path.append("/home/pcnerd/All_My_Alx_projects/alx-higher_level_programming/0x0A-python-inheritance")
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", "john")
+Traceback (most recent call last):
+TypeError: <name> must be an integer
+
+>>> bg.integer_validator("height", -3)
+Traceback (most recent call last):
+ValueError: <name> must be greater than 0
