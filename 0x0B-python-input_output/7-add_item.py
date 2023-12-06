@@ -20,7 +20,6 @@ def main():
         python_list = []
     finally:
         save_to_json_file(python_list + sys.argv[1:], "add_item.json")
-    print(load_from_json_file("add_item.json"))
 
 
 if __name__ == "__main__":
