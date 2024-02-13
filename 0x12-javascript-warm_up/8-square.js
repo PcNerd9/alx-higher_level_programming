@@ -6,7 +6,7 @@ if (number) {
   for (let i = 0; i < number; i++) {
     row = '';
     for (let j = 0; j < number; j++) {
-      row += 'xx';
+      row += 'X';
     }
     console.log(row);
   }
