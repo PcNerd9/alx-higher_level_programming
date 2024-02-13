@@ -6,10 +6,10 @@ if (number) {
   for (let i = 0; i < number; i++) {
     row = '';
     for (let j = 0; j < number; j++) {
-      row += 'x';
+      row += 'xx;
     }
     console.log(row);
   }
 } else {
-  console.log('iiMissing size');
+  console.log('Missing size');
 }
