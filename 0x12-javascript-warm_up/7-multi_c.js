@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-let number = Number(process.argv[2]);
+const number = Number(process.argv[2]);
 if (number) {
   for (let i = 0; i < number; i++) {
     console.log('C is fun');
