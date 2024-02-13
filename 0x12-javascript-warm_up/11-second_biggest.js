@@ -13,8 +13,8 @@ if (lenght === 2) {
       secondBiggest = biggest;
       biggest = number;
     } else if (number > secondBiggest) {
-	    secondBiggest = number;
+      secondBiggest = number;
     }
   }
+  console.log(secondBiggest);
 }
-console.log(secondBiggest);
