@@ -12,6 +12,8 @@ if (lenght === 2) {
     if (number > biggest) {
       secondBiggest = biggest;
       biggest = number;
+    } else if (number > secondBiggest) {
+	    secondBiggest = number;
     }
   }
 }
