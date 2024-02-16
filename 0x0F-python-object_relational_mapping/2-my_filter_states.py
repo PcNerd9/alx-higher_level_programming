@@ -5,7 +5,6 @@ State table with a particular name
 """
 
 
-
 def main():
     import MySQLdb
     import sys
