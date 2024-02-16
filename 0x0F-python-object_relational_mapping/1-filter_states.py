@@ -18,7 +18,7 @@ def main():
     db = MySQLdb.connect(host="localhost", port=3306,
                          user=user, password=password, database=database)
     cur = db.cursor()
-    cur.execute("SELECT * FROM State ORDER BY id")
+    cur.execute("SELECT * FROM states ORDER BY id")
     rows = cur.fetchall()
     for row in rows:
         if (row[1].startswith("N")):
