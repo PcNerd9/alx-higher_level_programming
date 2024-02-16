@@ -4,11 +4,10 @@
 contain a function that query a database
 """
 
-import MySQLdb
-import sys
-
 
 def main():
+    import MySQLdb
+    import sys
     """
     the main funcion of the program
     """
