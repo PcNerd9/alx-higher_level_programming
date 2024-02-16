@@ -4,11 +4,11 @@ query the database for all the states in the
 State table with a particular name
 """
 
-import MySQLdb
-import sys
 
 
 def main():
+    import MySQLdb
+    import sys
     """
     the main function that queries the database
     """
