@@ -4,11 +4,11 @@
 query the database to select all the rows in the state
 table
 """
-import MySQLdb
-import sys
 
 
 def main():
+    import MySQLdb
+    import sys
     """
     the main function for the program
     """
