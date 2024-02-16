@@ -1,9 +1,16 @@
 #!/usr/bin/python3
 
+"""
+query the database to select all the rows in the state
+table
+"""
 import MySQLdb
 import sys
 
 def main():
+    """
+    the main function for the program
+    """
     user = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]

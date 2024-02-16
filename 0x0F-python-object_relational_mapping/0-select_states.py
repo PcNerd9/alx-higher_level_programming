@@ -1,9 +1,15 @@
 #!/usr/bin/python3
 
+"""
+contain a function that query a database
+"""
 import MySQLdb
 import sys
 
 def main():
+    """
+    the main funcion of the program
+    """
     user = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]

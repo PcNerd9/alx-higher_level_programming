@@ -1,9 +1,16 @@
 #!/usr/bin/python3
+"""
+query the database for all the states in the
+State table with a particular name
+"""
 
 import MySQLdb
 import sys
 
 def main():
+    """
+    the main function that queries the database
+    """
     user = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
