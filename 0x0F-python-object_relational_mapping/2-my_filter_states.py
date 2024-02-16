@@ -19,7 +19,7 @@ def main():
     db = MySQLdb.connect(host="localhost", port=3306,
                          user=user, password=password, database=database)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name=%s ORDER BY id", (argument,))
+    cur.execute("SELECT * FROM states WHERE name={:s} ORDER BY id".format(argument))
     rows = cur.fetchall()
     for row in rows:
         print(row)

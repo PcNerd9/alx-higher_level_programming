@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 query the database to select all the rows in the state
 table
