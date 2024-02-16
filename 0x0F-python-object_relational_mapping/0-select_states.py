@@ -20,14 +20,14 @@ def main():
                              user=user, password=password, database=database)
     except Exception as e:
         print(e)
-
-    cur = db.cursor()
-    cur.execute("SELECT * FROM State ORDER BY id")
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
-    cur.close()
-    db.close()
+    else:
+        cur = db.cursor()
+        cur.execute("SELECT * FROM State ORDER BY id")
+        rows = cur.fetchall()
+        for row in rows:
+            print(row)
+        cur.close()
+        db.close()
 
 
 if __name__ == "__main__":
