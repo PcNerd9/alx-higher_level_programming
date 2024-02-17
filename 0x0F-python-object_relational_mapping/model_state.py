@@ -2,7 +2,7 @@
 """
 State class inheriting from sqlalchemy base
 """
-from sqlalchemy import create_engine, Column, String, Interger
+from sqlalchemy import create_engine, Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
