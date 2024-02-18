@@ -16,6 +16,11 @@ def main():
 
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(
         sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pre_pool_ping=True)
+                           pool_pre_ping=True)
     session = Session(engine)
-    
+    states = session.query(State).delete()
+    session.commit()
+
+
+if __name__ == "__main__":
+    main()
