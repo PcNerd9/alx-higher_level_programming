@@ -15,10 +15,10 @@ def main():
     import sys
 
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(
-        sys.argv[1], sys.arv[2], sys.argv[3]),
-                           pre_pool_ping=True)
+        sys.argv[1], sys.argv[2], sys.argv[3]),
+                           pool_pre_ping=True)
     session = Session(engine)
-    state = session.query(State).filter_by(State.id=2).first()
+    state = session.query(State).filter_by(id=2).first()
     state.name = "New Mexico"
     session.commit()
 
