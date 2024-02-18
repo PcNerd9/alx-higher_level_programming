@@ -25,7 +25,7 @@ def main():
         for state in states:
             print(state.id)
     else:
-        print("Not Found")
+        print("Not found")
 
 
 if __name__ == "__main__":
