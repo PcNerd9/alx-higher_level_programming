@@ -18,7 +18,8 @@ def main():
         sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
     session = Session(engine)
-    states = session.query(State).delete()
+    states = session.query(State).filter(State.name.like("%a%")).delete(
+            synchronize_session=False)
     session.commit()
 
 
