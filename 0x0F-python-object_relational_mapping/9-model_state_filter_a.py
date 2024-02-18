@@ -20,6 +20,10 @@ def main():
                            pool_pre_ping=True)
     session = Session(engine)
 
-    states = session.query(State).filter_by(State.name="%a%").order_by(States.id)
+    states = session.query(State).filter(State.name.like("%a%")).order_by(State.id)
     for state in states:
         print(f"{state.id}: {state.name}")
+
+
+if __name__ == "__main__":
+    main()
