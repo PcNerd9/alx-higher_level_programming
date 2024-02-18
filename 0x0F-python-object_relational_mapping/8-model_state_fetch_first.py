@@ -13,12 +13,14 @@ def main():
     """
     The main entry of the program
     """
+
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(
         sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
     session = Session(engine)
     first_state = session.query(State).order_by(State.id).first()
-    print(f"{first_state.id}: {first_state.name}")
+    if (first_state):
+        print(f"{first_state.id}: {first_state.name}")
 
 
 if __name__ == "__main__":
