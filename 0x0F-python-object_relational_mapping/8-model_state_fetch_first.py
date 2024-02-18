@@ -5,7 +5,8 @@ using the sqlalchemy to query the database
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
-from model_states import Base, State
+from model_state import Base, State
+import sys
 
 
 def main():
