@@ -9,6 +9,7 @@ from sqlalchemy.orm import Session
 from model_state import Base, State
 import sys
 
+
 def main():
     """
     The entry of the main program
@@ -17,11 +18,13 @@ def main():
         sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
     session = Session(engine)
-    state = session.query(State).filter_by(name="Texas").order_by(State.id)
-    if (state):
-        print(state.id)
+    states = session.query(State).filter_by(
+            name=sys.argv[4]).order_by(State.id)
+    if (states.count() != 0):
+        for state in states:
+            print(state.id)
     else:
-        print("Not found")
+        print("Not Found")
 
 
 if __name__ == "__main__":
