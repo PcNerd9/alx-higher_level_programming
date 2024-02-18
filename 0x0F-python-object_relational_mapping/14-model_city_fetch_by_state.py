@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 """
+Query the database to list all the
+states and all the cities in that state
 """
 
 from sqlalchemy import create_engine
@@ -12,6 +14,7 @@ from sys import argv
 
 def main():
     """
+    The entry to the main program
     """
 
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(
