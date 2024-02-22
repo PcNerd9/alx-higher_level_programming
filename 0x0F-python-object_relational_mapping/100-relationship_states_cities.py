@@ -6,8 +6,8 @@ create a state and city from the database
 
 from sys import argv
 from sqlalchemy import create_engine
-from relationship_city import City
 from relationship_state import State, Base
+from relationship_city import City
 from sqlalchemy.orm import sessionmaker
 
 
@@ -22,8 +22,9 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
+    new_city = City(name="San Francisco")
     new_state = State(name="California")
-    new_city = City(name="San Francisco", state_id=new_state.id)
+    print("Testing")
     new_state.cities.append(new_city)
 
     session.add(new_state)
