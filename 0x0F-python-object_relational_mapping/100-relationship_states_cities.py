@@ -24,7 +24,6 @@ def main():
 
     new_city = City(name="San Francisco")
     new_state = State(name="California")
-    print("Testing")
     new_state.cities.append(new_city)
 
     session.add(new_state)
