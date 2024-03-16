@@ -7,9 +7,23 @@ MySQLdb module
 from sys import argv
 import MySQLdb
 
-db = MySQLdb.connect(host=argv[1], user=argv[2], passwd=argv[3], db=argv[4])
-cur = db.cursor()
-cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
-states = cur.fetchall()
-for state in states:
-    print(state)
+
+def main():
+    """
+    the entry to the main program
+    """
+    host = argv[1]
+    user = argv[2]
+    password = argv[3]
+    database = argv[4]
+    db = MySQLdb.connect(host=host, user=user,
+                         passwd=password, db=database)
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    states = cur.fetchall()
+    for state in states:
+        print(state)
+
+
+if __name__ == "__main__":
+    main()
