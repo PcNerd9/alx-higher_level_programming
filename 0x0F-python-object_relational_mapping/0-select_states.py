@@ -1,34 +1,14 @@
 #!/usr/bin/python3
-
 """
-contain a function that query a database
+connect to mysql database and query all the states
+in the database passed as argument
 """
+from sys import argv
+import MySQLdb
 
-
-def main():
-    import MySQLdb
-    import sys
-    """
-    the main funcion of the program
-    """
-    try:
-        user = sys.argv[1]
-        password = sys.argv[2]
-        database = sys.argv[3]
-
-        db = MySQLdb.connect(host='localhost', port=3306,
-                             user=user, password=password, database=database)
-    except Exception as e:
-        print(e)
-    else:
-        cur = db.cursor()
-        cur.execute("SELECT * FROM states ORDER BY id")
-        rows = cur.fetchall()
-        for row in rows:
-            print(row)
-        cur.close()
-        db.close()
-
-
-if __name__ == "__main__":
-    main()
+db = MySQLdb.connect(host=argv[1], user=argv[2], passwd=argv[3], db=argv[4])
+cur = db.cursor()
+cur.execute("SELECT * FROM states")
+states = cur.fetchall()
+for state in states:
+    print(state)
