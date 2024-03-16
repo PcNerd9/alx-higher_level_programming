@@ -12,8 +12,8 @@ def main():
     from sys import argv
     import MySQLdb
 
-    db = MySQLdb.connect(host=argv[1], user=argv[2],
-                         passwd=argv[3], db=argv[4])
+    db = MySQLdb.connect(host="localhost", port=3306,  user=argv[1],
+                         passwd=argv[2], db=argv[3])
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY id")
     states = cur.fetchall()
