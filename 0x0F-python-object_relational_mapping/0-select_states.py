@@ -1,24 +1,33 @@
 #!/usr/bin/python3
+
 """
-connect to mysql database and query all the states
-in the database passed as argument
+contain a function that query a database
 """
 
 
 def main():
-    """
-    the entry to the main program
-    """
-    from sys import argv
     import MySQLdb
+    import sys
+    """
+    the main funcion of the program
+    """
+    try:
+        user = sys.argv[1]
+        password = sys.argv[2]
+        database = sys.argv[3]
 
-    db = MySQLdb.connect(host="localhost", port=3306,  user=argv[1],
-                         passwd=argv[2], db=argv[3])
-    cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id")
-    states = cur.fetchall()
-    for state in states:
-        print(state)
+        db = MySQLdb.connect(host='localhost', port=3306,
+                             user=user, password=password, database=database)
+    except Exception as e:
+        print(e)
+    else:
+        cur = db.cursor()
+        cur.execute("SELECT * FROM states ORDER BY id")
+        rows = cur.fetchall()
+        for row in rows:
+            print(row)
+        cur.close()
+        db.close()
 
 
 if __name__ == "__main__":
