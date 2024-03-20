@@ -30,7 +30,7 @@ def main():
 
             print(states[len(states) - 1][0])
     except Exception as e:
-        print(e)
+        pass
 
 
 if __name__ == "__main__":
