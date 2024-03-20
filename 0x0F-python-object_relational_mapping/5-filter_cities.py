@@ -29,6 +29,8 @@ def main():
                 print(states[i][0], end=", ")
 
             print(states[len(states) - 1][0])
+        else:
+            print()
     except Exception as e:
         pass
 
