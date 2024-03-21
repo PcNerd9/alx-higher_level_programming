@@ -21,8 +21,11 @@ def main():
     session = Session(engine)
 
     states = session.query(State).order_by(State.id).all()
-    for state in states:
-        print(f"{state.id}: {state.name}")
+    if (states):
+        for state in states:
+            print(f"{state.id}: {state.name}")
+    else:
+        print()
 
 
 if __name__ == "__main__":
