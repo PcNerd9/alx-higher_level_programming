@@ -24,8 +24,6 @@ def main():
     if (states):
         for state in states:
             print(f"{state.id}: {state.name}")
-    else:
-        print()
 
 
 if __name__ == "__main__":
