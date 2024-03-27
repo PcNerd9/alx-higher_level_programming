@@ -1,1 +1,1 @@
-this repo makes me understands the concept of http networking with python
+This repo contain tasks that makes me to understand the concept of networking in python
