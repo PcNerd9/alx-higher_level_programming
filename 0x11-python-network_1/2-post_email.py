@@ -17,7 +17,8 @@ def main():
         data = data.encode("ascii")
         req = urllib.request.Request(url, data)
         with urllib.request.urlopen(req) as response:
-            print(response.read())
+            the_page = response.read()
+            print(the_page.decode("utf-8"))
     except Exception as e:
         print(e)
 
