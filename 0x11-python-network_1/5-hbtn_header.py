@@ -9,7 +9,7 @@ def main():
     import requests
 
     response = requests.get(sys.argv[1])
-    print(response.headers["X-Request-Id"])
+    print(response.headers.get("X-Request-Id"))
 
 
 if __name__ == "__main__":
