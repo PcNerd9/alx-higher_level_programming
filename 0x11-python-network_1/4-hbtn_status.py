@@ -8,7 +8,7 @@ def main():
     import requests
     import sys
 
-    response = requests.get(sys.argv[1])
+    response = requests.get("https://alx-intranet.hbtn.io/status")
     response.encoding = "utf-8"
     print("Body response:")
     print("\t- type: {}".format(type(response.text)))
