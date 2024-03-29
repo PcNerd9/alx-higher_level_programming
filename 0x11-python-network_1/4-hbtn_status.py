@@ -9,6 +9,7 @@ def main():
     import sys
 
     response = requests.get(sys.argv[1])
+    response.encoding = "utf-8"
     print("Body response:")
     print("\t- type: {}".format(type(response.text)))
     print("\t- content: {}".format(response.text))
