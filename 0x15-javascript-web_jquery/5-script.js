@@ -1,3 +1,6 @@
-$('DIV #add_item').click(function() {
-	$('UL.my_list').append('<li>Item</li>')
-})
+$(document).ready(function() {
+	$('#add_item').click(function() {
+		const newItem = $('<li>Item</li>');
+		$('ul.mylist').append(newItem);
+	});
+});

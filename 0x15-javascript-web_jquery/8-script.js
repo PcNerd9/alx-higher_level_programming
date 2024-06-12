@@ -1,5 +1,7 @@
-$.get('https://swapi-api.alx-tools.com/api/films/?format=json', function(data, textStatus) {
-	$.each(data.results, function(index, data) {
-		$('UL#list_movies').append('<li>'+${data.title}+'</li>');
+$(document).ready(function() {
+	$.get('https://swapi-api.alx-tools.com/api/films/?format=json', function(data) {
+		$.each(data.results, function(index, movie) {
+			$('#list_movies').append('<li>' + movie.title + '</li>');
+		});
 	});
-})
+});

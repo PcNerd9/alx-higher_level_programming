@@ -16,5 +16,5 @@ $(document).ready(function() {
 		if (event.which == 13) {
 			fetchTranslation();
 		}
-	});
+	})
 });

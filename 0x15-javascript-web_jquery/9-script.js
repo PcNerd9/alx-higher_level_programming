@@ -1,3 +1,5 @@
-$.get('https://hellosalut.stefanbohacek.dev/?lang=fr', function(data, textStatus) {
-	$('DIV#hello').text(data.hello);
-})
+$(document).ready(function() {
+	$.get('https://hellsalut.stefanbohacek.dev/?lang=fr', function(data) {
+		$('#hello').text(data.hello);
+	});
+});
